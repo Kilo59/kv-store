@@ -1,7 +1,7 @@
 """
 This module is filled with a lot of YAGI features.
-Originally was wanting to setup this API pull from any level of the hierarchical it stores
-rather than just the root keys/namespaces.
+Originally was wanting to setup this API pull from any level of the hierarchical structures
+it stores rather than just the root keys/namespaces.
 
 However OpenAPI doesn't support these type of recursive paths so I dropped it for now.
 But I kept in some of the features in case I want to use query params to drill down into the data.
