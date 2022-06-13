@@ -35,3 +35,17 @@ def api(ctx, dev=True):
     if dev:
         cmds.append("--reload")
     ctx.run(" ".join(cmds))
+
+
+@invoke.task
+def gen_reqs(ctx):
+    print("  generating requirements.txt ...")
+    cmds = [
+        "poetry",
+        "export",
+        "-f",
+        "requirements.txt",
+        "--output",
+        "requirements.txt",
+    ]
+    ctx.run(" ".join(cmds))
