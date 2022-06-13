@@ -48,8 +48,7 @@ def namespace_path(namespace: str, *extras: str) -> gd.Path:
             paths.extend(tokens)
         if extras:
             paths.append(namespace_path(*extras))
-    combined_path = gd.Path(*paths)
-    return combined_path
+    return gd.Path(*paths)
 
 
 SEED_DATA = {
