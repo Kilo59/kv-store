@@ -39,7 +39,8 @@ def api(ctx, dev=True):
 
 @invoke.task
 def gen_reqs(ctx):
-    print("  generating requirements.txt ...")
+    req_file_path = "requirements.txt"
+    print(f"  generating {req_file_path} ...")
     cmds = [
         "poetry",
         "export",
@@ -47,6 +48,8 @@ def gen_reqs(ctx):
         "requirements.txt",
         "--without-hashes",
         "--output",
-        "requirements.txt",
+        req_file_path,
     ]
     ctx.run(" ".join(cmds))
+    with open(req_file_path, mode="a", encoding="utf-8") as file_out:
+        file_out.write(". # install package\n")
