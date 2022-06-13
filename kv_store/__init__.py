@@ -1,3 +1,4 @@
+"""kv-store API"""
 from importlib import metadata
 
 # https://github.com/python-poetry/poetry/issues/273#issuecomment-1103812336

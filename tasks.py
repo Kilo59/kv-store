@@ -25,7 +25,7 @@ def fmt(ctx, path=".", sort_=True, check=False):
 
 
 @invoke.task
-def lint(ctx, path="kv-store"):
+def lint(ctx, path="kv_store"):
     ctx.run(f"pylint {path}")
 
 
