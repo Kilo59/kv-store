@@ -25,3 +25,13 @@ Start api
 ```
 poetry run invoke api
 ```
+
+## TODO
+
+- [x] API
+- [x] Client
+- [ ] CLI
+- [ ] Dockerfiles
+  - [ ] Server
+  - [ ] Client
+  - [ ] compose
