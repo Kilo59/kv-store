@@ -30,11 +30,16 @@ def lint(ctx, path="kv_store"):
 
 
 @invoke.task
-def api(ctx, dev=True):
+def api(ctx, dev=False):
     cmds = ["uvicorn kv_store.api.main:app"]
     if dev:
         cmds.append("--reload")
     ctx.run(" ".join(cmds))
+
+
+@invoke.task
+def tests(ctx):
+    ctx.run(" ".join(["pytest", "-vv"]))
 
 
 @invoke.task

@@ -26,6 +26,20 @@ Start api
 poetry run invoke api
 ```
 
+## Automated Tests
+
+```
+poetry run pytest -vv
+```
+
+## Usage
+
+For usage instructions refer to the ReDoc UI.
+If running locally visit http://127.0.0.1:8000/schema
+
+Otherwise see the heroku deployment https://py-kv-store.herokuapp.com/schema
+Note the heroku application may be asleep if not used recently. It make take a few seconds to boot up.
+
 ## TODO
 
 - [x] API
