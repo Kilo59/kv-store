@@ -80,7 +80,7 @@ _CLIENT_MAPPING = {"http": HttpClient}
 
 def factory(protocol: str, config: Optional[dict] = None) -> Client:
     """Return a client instance according to provided protocol and config."""
-    config = config if config else {}
+    config = config or {}
 
     try:
         client = _CLIENT_MAPPING[protocol]
